@@ -803,9 +803,10 @@
 
     
 import * as THREE from 'three';
-import ThreeGlobe from 'three-globe'
+import Globe from 'globe.gl';
+// import ThreeGlobe from 'three-globe'
 import { GLTFLoader } from './GLTFLoader.js';
-import {Tween, Group} from 'https://unpkg.com/@tweenjs/tween.js@23.1.3/dist/tween.esm.js'
+import {Tween, Group} from 'https://unpkg.com/@tweenjs/tween.js@23.1.3/dist/tween.esm.js';
 
 const models = {
     'stanford': './models/stanford.glb',
