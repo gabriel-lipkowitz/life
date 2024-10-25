@@ -12,7 +12,7 @@
   "description": "",
   "dependencies": {
     "@tweenjs/tween.js": "^25.0.0",
-    "globe.gl": "^2.32.6",
+    "globe.gl": "^2.33.1",
     "gsap": "^3.12.5",
     "three": "^0.168.0",
     "three-globe": "^2.31.3",
