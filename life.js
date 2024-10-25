@@ -1,17 +1,22 @@
-import gsap from 'gsap'
-import * as THREE from "three";
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-// import { RotateControls } from 'three/addons/controls/DragControls.js';
-import { loadCurveFromJSON } from './curveTools/CurveMethods.js'
-import getStarfield from "./src/getStarfield.js";
-import { getFresnelMat } from "./src/getFresnelMat.js";
-import ThreeGlobe from 'three-globe';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { TrackballControls } from 'three/addons/controls/TrackballControls.js';
-import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
-import {Tween, Group} from '@tweenjs/tween.js'
-import PositionAlongPathState from './positionAlongPathTools/PositionAlongPathState.js';
-import { handleScroll, updatePosition, handleScrollTarget, updatePositionTarget } from './positionAlongPathTools/PositionAlongPathMethods.js'
+// import gsap from 'gsap'
+// import * as THREE from "three";
+// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+// // import { RotateControls } from 'three/addons/controls/DragControls.js';
+// import { loadCurveFromJSON } from './curveTools/CurveMethods.js'
+// import getStarfield from "./src/getStarfield.js";
+// import { getFresnelMat } from "./src/getFresnelMat.js";
+// import ThreeGlobe from 'three-globe';
+// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+// import { TrackballControls } from 'three/addons/controls/TrackballControls.js';
+// import { GLTFExporter } from 'three/addons/exporters/GLTFExporter.js';
+// import {Tween, Group} from '@tweenjs/tween.js'
+// import PositionAlongPathState from './positionAlongPathTools/PositionAlongPathState.js';
+// import { handleScroll, updatePosition, handleScrollTarget, updatePositionTarget } from './positionAlongPathTools/PositionAlongPathMethods.js'
+
+import * as THREE from 'three';
+import ThreeGlobe from 'three-globe'
+import { GLTFLoader } from './node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+import {Tween, Group} from 'https://unpkg.com/@tweenjs/tween.js@23.1.3/dist/tween.esm.js'
 
 
 const models = {
@@ -459,8 +464,6 @@ export async function initializeGlobe() {
         (document.getElementById('globeViz'));
 
         let camera_anim = gsap.timeline();
-
-        let curvePath = await loadCurveFromJSON(scene, curvePathJSON);
 
         function animateModelScaleSequential({label, increment, delay, duration}) {
         
