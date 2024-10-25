@@ -646,7 +646,6 @@ sequentialArcs(cityPairs);
       let isAnimating = false;
 
 
-      let positionAlongPathState = new PositionAlongPathState();
 
       function onMouseScroll(event){
         // handleScrollTarget(event, positionAlongPathState);
